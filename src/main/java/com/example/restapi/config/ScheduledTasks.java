@@ -13,6 +13,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @Component
+
 public class ScheduledTasks {
 
     @Autowired
@@ -25,7 +26,7 @@ public class ScheduledTasks {
     public void init() {
         this.startTime = System.currentTimeMillis();
     }
-    @Scheduled(fixedRate = 1000)
+//    @Scheduled(fixedRate = 1000)
     public void insertData() {
         // 5초가 지났는지 확인
         if (System.currentTimeMillis() - startTime >= 5 * 1000) {

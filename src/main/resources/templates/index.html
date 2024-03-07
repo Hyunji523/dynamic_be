@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+
+<head>
+    <!-- Include the CesiumJS JavaScript and CSS files -->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.114/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.114/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"></script>
+
+    <meta charset="UTF-8">
+    <style>
+        .map_choice_wrap {
+            margin-top: 100px;
+            display: flex;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            z-index: 10;
+        }
+        #stop {
+            width: 64px;
+            height: 58px;
+            margin-right: 8px;
+            background-color: RED;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%);
+            border: 1px solid rgba(0,0,0,.2);
+            cursor: pointer;
+        }
+
+        #start {
+            width: 64px;
+            height: 58px;
+            margin-right: 8px;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%);
+            border: 1px solid rgba(0,0,0,.2);
+            cursor: pointer;
+            content:"";
+        }
+    </style>
+    <title>Title</title>
+
+</head>
+<body>
+<!--<script>-->
+<!--    let viewer = new Cesium.Viewer('cesiumContainer');-->
+<!--    // 특정 위치로 이동-->
+<!--    viewer.camera.flyTo({-->
+<!--        destination: Cartesian3.fromDegrees(126.9739802, 37.39965698, 1000.0)-->
+<!--    });-->
+<!--</script>-->
+<script src="/static/js/map.js"></script>
+<div id="cesiumContainer" style="height: 900px; width: 100%">
+    <div class="map_choice_wrap">
+        <button id="stop">STOP</button>
+        <button id="start">실시간데이터보기</button>
+    </div>
+</div>
+</body>
+</html>

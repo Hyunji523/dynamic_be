@@ -37,7 +37,7 @@ public class CctvTransDataController {
 
     @GetMapping(value ="/connect", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public SseEmitter handle(HttpServletRequest request) {
-        return sseEmitterManager.createEmitter(request);
+        return sseEmitterManager.createEmitter();
     }
 
     @GetMapping("/all")
